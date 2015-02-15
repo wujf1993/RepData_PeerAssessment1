@@ -72,7 +72,7 @@ hist(step_per_day$sum_steps,
      xlab = "Total Steps per Day")
 ```
 
-![plot of chunk unnamed-chunk-4](figure/Figure1.png) 
+![plot of chunk unnamed-chunk-4](Figure1.png) 
 
 It shows that the totals follow roughly normal distribution with median between *10,000* and *15,000*.  
 
@@ -118,7 +118,7 @@ plot(step_per_interval$mean_steps, type = "l",
      ylim = range(0, 210))
 ```
 
-![plot of chunk unnamed-chunk-7](figure/Figure2.png) 
+![plot of chunk unnamed-chunk-7](Figure2.png) 
 
 2. Find which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps
 
@@ -195,7 +195,7 @@ hist(step_per_day_new$sum_steps,
      xlab = "Total Steps per Day")
 ```
 
-![plot of chunk unnamed-chunk-12](figure/Figure3.png) 
+![plot of chunk unnamed-chunk-12](Figure3.png) 
 
 ```r
 mean(step_per_day_new$sum_steps)
@@ -242,6 +242,6 @@ names(step_per_interval_day) <- c("interval", "day", "mean_steps")
 ggplot(step_per_interval_day, aes(interval, mean_steps)) + geom_smooth(stat="identity") + facet_grid(day ~ .)
 ```
 
-![plot of chunk unnamed-chunk-14](figure/Figure4.png) 
+![plot of chunk unnamed-chunk-14](Figure4.png) 
 
 From the panel plot, it is clear that there are different patterns between weekend days and weekdays. During weekdays, the total steps peak in the early morning with significant higher values (~*250*) than minor peaks (~*100*) in the afternoon. During weekend though, there are multiple peaks throughout the day, with values varied from *100* to *150*.
